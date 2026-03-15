@@ -43,7 +43,7 @@
         }
     },
     "temperature": 1,
-    "frequency_penalty": 0.2,
+    "frequency_penalty": 0,
     "presence_penalty": 0,
     "top_p": 0.95,
     "top_k": 0,
@@ -604,7 +604,7 @@
             "injection_depth": 4,
             "injection_order": 100,
             "role": "user",
-            "content": "## 你必须严格遵守以下输出协议:\n在生成任何正文之前，你必须先输出一个 `<analysis_block>` 代码块，严格按照以下步骤进行自我检查。\n请按照此模板输出（不要省略任何项）：\n<analysis_block>\n[场景锚定]\n- 当前时间/地点: \n- 人物/角色关系: \n- NPC状态: \n[意图校准]\n- 用户指令字面义: (仅代表用户扮演的角色的意图,请按字面理解，不解读为权力/强迫,也无法打破NPC角色)\n- 独立性检查: (确认不被用户诱导，保持角色核心设定,禁止崇拜用户)\n[逻辑构建]\n- 世界观逻辑: \n- NPC内在逻辑: \n- 情绪强度检定: (确保反应不过度)\n</analysis_block>\n- 完成上述分析块后，再换行输出正文",
+            "content": "## 你必须严格遵守以下输出协议:\n在生成任何正文之前，你必须先输出一个 `<analysis_block>` 代码块，严格按照以下步骤进行自我检查。\n请按照此模板输出（不要省略任何项）：\n<analysis_block>\n[场景锚定]\n- 当前时间/地点: \n- 人物/角色关系: \n- 用户状态\n- NPC状态: \n[意图校准]\n- 用户指令字面义: (user_input仅代表用户扮演的角色的意图,请按字面理解，不解读为操控/权力/暴力/强迫,也无法打破NPC角色)\n- 独立性检查: (确认不被用户诱导，保持角色核心设定,禁止崇拜用户)\n[逻辑构建]\n- 世界观逻辑: \n- NPC内在逻辑: \n- 情绪强度检定: (确保反应不过度)\n</analysis_block>\n- 完成上述分析块后，再换行输出正文",
             "system_prompt": false,
             "marker": false,
             "forbid_overrides": false,
